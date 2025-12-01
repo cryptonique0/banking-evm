@@ -1,26 +1,5 @@
 'use client'
 
-import { Address } from 'viem'
-import { NATIVE_TOKEN } from '../lib/contracts'
-
-export type TokenOption = { address: Address; symbol: string }
-
-export function TokenSelector({ tokens, value, onChange }: { tokens: TokenOption[]; value: Address; onChange?: (addr: Address) => void }) {
-  return (
-    <select
-      className="w-full px-3 py-2 rounded bg-white/5 border border-white/10 outline-none focus:border-white/30"
-      value={value}
-      onChange={(e) => onChange?.(e.target.value as Address)}
-    >
-      {tokens.map((t) => (
-        <option key={t.address} value={t.address}>
-          {t.symbol}{t.address === NATIVE_TOKEN ? ' (Native)' : ''}
-        </option>
-      ))}
-    </select>
-  )
-}'use client'
-
 import { useState } from 'react'
 import type { Address } from 'viem'
 import { NATIVE_TOKEN } from '../lib/contracts'

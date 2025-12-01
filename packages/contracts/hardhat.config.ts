@@ -1,6 +1,5 @@
 import { HardhatUserConfig } from 'hardhat/config'
 import '@nomicfoundation/hardhat-toolbox'
-import './tasks/balances'
 import * as dotenv from 'dotenv'
 
 dotenv.config()
