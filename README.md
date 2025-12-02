@@ -1,36 +1,40 @@
-# Base DeFi Bank (Monorepo)
+# Base DeFi Bank
 
-A decentralized banking dApp on Base with wallet connection (RainbowKit + WalletConnect), built with Next.js and Hardhat.
+A fully decentralized banking dApp built on Base blockchain with wallet connect integration.
 
-- Frontend: `apps/web` (Next.js 14, TypeScript, Tailwind, wagmi + viem + RainbowKit)
-- Smart contracts: `packages/contracts` (Hardhat, Solidity 0.8.24)
+## Features
 
-## Prerequisites
-- Node.js 18+
-- npm, pnpm, or yarn
+- 🔐 **No Identity Verification** - Fully on-chain, Web3-native banking
+- 💰 **Native ETH Support** - Deposit, withdraw, and transfer ETH
+- 🪙 **ERC20 Token Support** - Manage any ERC20 token
+- 🔄 **Internal Transfers** - Transfer between users without gas costs
+- 🌉 **Base Network** - Built on Base (Ethereum L2) for low fees
+- 🔌 **WalletConnect** - Connect with any wallet via RainbowKit
 
-## Setup
-1. Copy environment examples and fill values
+## Quick Start
 
-cp apps/web/.env.example apps/web/.env.local
-cp packages/contracts/.env.example packages/contracts/.env
+```bash
+git clone https://github.com/cryptonique0/banking-evm.git
+cd banking-evm
+npm install --legacy-peer-deps
+npm run dev
+```
 
-2. Install dependencies (from repo root)
+Visit http://localhost:3000
 
-npm install
+## Tech Stack
 
-## Development
-- Run frontend: `npm run dev`
-- Build all: `npm run build`
+- **Frontend**: Next.js 14 + TypeScript + Tailwind + wagmi + RainbowKit
+- **Contracts**: Solidity 0.8.24 + Hardhat + OpenZeppelin
+- **Network**: Base (Ethereum L2)
 
-## Deploy contracts
-From `packages/contracts`:
+## Deploy Contracts
 
-npm run compile
-npm run deploy:sepolia
+```bash
+cd packages/contracts
+npm run deploy:sepolia  # Deploy to Base Sepolia testnet
+```
 
-This writes the deployed address and ABI to `apps/web/contracts/deBank.json` for the frontend.
+## License
 
-## Notes
-- Default chain is Base Sepolia; switch to Base mainnet for production.
-- No identity verification; all actions occur directly on-chain.
+MIT
