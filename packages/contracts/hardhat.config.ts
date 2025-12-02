@@ -23,6 +23,16 @@ const config: HardhatUserConfig = {
       accounts: PRIVATE_KEY,
       chainId: 8453,
     },
+    celoAlfajores: {
+      url: process.env.CELO_ALFAJORES_RPC_URL || 'https://alfajores-forno.celo-testnet.org',
+      accounts: PRIVATE_KEY,
+      chainId: 44787,
+    },
+    celo: {
+      url: process.env.CELO_MAINNET_RPC_URL || 'https://forno.celo.org',
+      accounts: PRIVATE_KEY,
+      chainId: 42220,
+    },
   },
 }
 

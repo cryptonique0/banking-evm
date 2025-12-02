@@ -6,8 +6,8 @@ import { Connect } from '../components/Connect'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Base DeFi Bank',
-  description: 'Decentralized banking on Base',
+  title: 'DeFi Bank - Base & Celo',
+  description: 'Decentralized banking on Base and Celo',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <WalletProvider>
           <nav className="flex items-center justify-between px-6 py-4 border-b border-white/10">
             <div className="flex gap-4 items-center">
-              <Link href="/" className="font-semibold">Base DeFi Bank</Link>
+              <Link href="/" className="font-semibold">DeFi Bank</Link>
               <Link href="/deposit" className="text-sm opacity-80 hover:opacity-100">Deposit</Link>
               <Link href="/withdraw" className="text-sm opacity-80 hover:opacity-100">Withdraw</Link>
               <Link href="/transfer" className="text-sm opacity-80 hover:opacity-100">Transfer</Link>
