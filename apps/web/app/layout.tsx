@@ -16,11 +16,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <WalletProvider>
           <nav className="flex items-center justify-between px-6 py-4 border-b border-white/10">
-            <div className="flex gap-4 items-center">
-              <Link href="/" className="font-semibold">DeFi Bank</Link>
-              <Link href="/deposit" className="text-sm opacity-80 hover:opacity-100">Deposit</Link>
-              <Link href="/withdraw" className="text-sm opacity-80 hover:opacity-100">Withdraw</Link>
-              <Link href="/transfer" className="text-sm opacity-80 hover:opacity-100">Transfer</Link>
+            <div className="flex gap-4 items-center overflow-x-auto">
+              <Link href="/" className="font-semibold whitespace-nowrap">DeFi Bank</Link>
+              <Link href="/deposit" className="text-sm opacity-80 hover:opacity-100 whitespace-nowrap">Deposit</Link>
+              <Link href="/withdraw" className="text-sm opacity-80 hover:opacity-100 whitespace-nowrap">Withdraw</Link>
+              <Link href="/transfer" className="text-sm opacity-80 hover:opacity-100 whitespace-nowrap">Transfer</Link>
+              <Link href="/lending" className="text-sm opacity-80 hover:opacity-100 whitespace-nowrap">Lending</Link>
+              <Link href="/staking" className="text-sm opacity-80 hover:opacity-100 whitespace-nowrap">Staking</Link>
             </div>
             <div>
               <Connect />
