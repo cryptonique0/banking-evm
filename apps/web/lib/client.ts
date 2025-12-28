@@ -1,5 +1,6 @@
 import { createPublicClient, http } from 'viem'
 import { base, baseSepolia, celo, celoAlfajores } from 'wagmi/chains'
+import type { Chain } from 'viem'
 
 export const publicClient = createPublicClient({
   chain: baseSepolia,
@@ -8,7 +9,7 @@ export const publicClient = createPublicClient({
 
 // Helper to get client for specific chain
 export const getClientForChain = (chainId: number) => {
-  let chain = baseSepolia
+  let chain: Chain = baseSepolia
   if (chainId === base.id) chain = base
   if (chainId === celo.id) chain = celo
   if (chainId === celoAlfajores.id) chain = celoAlfajores

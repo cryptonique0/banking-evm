@@ -3,5 +3,6 @@
 /* eslint-disable */
 export * as mocks from "./mocks";
 export { DeBank__factory } from "./DeBank__factory";
+export { DeBankAMM__factory } from "./DeBankAMM__factory";
 export { DeBankLending__factory } from "./DeBankLending__factory";
 export { DeBankStaking__factory } from "./DeBankStaking__factory";

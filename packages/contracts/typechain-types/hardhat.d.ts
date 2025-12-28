@@ -38,6 +38,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IERC20__factory>;
     getContractFactory(
+      name: "SafeCast",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.SafeCast__factory>;
+    getContractFactory(
       name: "ReentrancyGuard",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ReentrancyGuard__factory>;
@@ -45,6 +49,10 @@ declare module "hardhat/types/runtime" {
       name: "DeBank",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.DeBank__factory>;
+    getContractFactory(
+      name: "DeBankAMM",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.DeBankAMM__factory>;
     getContractFactory(
       name: "DeBankLending",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -89,6 +97,11 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.IERC20>;
     getContractAt(
+      name: "SafeCast",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.SafeCast>;
+    getContractAt(
       name: "ReentrancyGuard",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -98,6 +111,11 @@ declare module "hardhat/types/runtime" {
       address: string | ethers.Addressable,
       signer?: ethers.Signer
     ): Promise<Contracts.DeBank>;
+    getContractAt(
+      name: "DeBankAMM",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.DeBankAMM>;
     getContractAt(
       name: "DeBankLending",
       address: string | ethers.Addressable,
@@ -139,6 +157,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IERC20>;
     deployContract(
+      name: "SafeCast",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.SafeCast>;
+    deployContract(
       name: "ReentrancyGuard",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.ReentrancyGuard>;
@@ -146,6 +168,10 @@ declare module "hardhat/types/runtime" {
       name: "DeBank",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.DeBank>;
+    deployContract(
+      name: "DeBankAMM",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.DeBankAMM>;
     deployContract(
       name: "DeBankLending",
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -190,6 +216,11 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IERC20>;
     deployContract(
+      name: "SafeCast",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.SafeCast>;
+    deployContract(
       name: "ReentrancyGuard",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -199,6 +230,11 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.DeBank>;
+    deployContract(
+      name: "DeBankAMM",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.DeBankAMM>;
     deployContract(
       name: "DeBankLending",
       args: any[],

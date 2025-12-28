@@ -87,5 +87,3 @@ export function TransactionHistory() {
     </div>
   )
 }
-
-export { addTransaction }

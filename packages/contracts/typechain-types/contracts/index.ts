@@ -4,5 +4,6 @@
 import type * as mocks from "./mocks";
 export type { mocks };
 export type { DeBank } from "./DeBank";
+export type { DeBankAMM } from "./DeBankAMM";
 export type { DeBankLending } from "./DeBankLending";
 export type { DeBankStaking } from "./DeBankStaking";

@@ -21,8 +21,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <Link href="/deposit" className="text-sm opacity-80 hover:opacity-100 whitespace-nowrap">Deposit</Link>
               <Link href="/withdraw" className="text-sm opacity-80 hover:opacity-100 whitespace-nowrap">Withdraw</Link>
               <Link href="/transfer" className="text-sm opacity-80 hover:opacity-100 whitespace-nowrap">Transfer</Link>
+              <Link href="/swap" className="text-sm opacity-80 hover:opacity-100 whitespace-nowrap">Swap</Link>
               <Link href="/lending" className="text-sm opacity-80 hover:opacity-100 whitespace-nowrap">Lending</Link>
               <Link href="/staking" className="text-sm opacity-80 hover:opacity-100 whitespace-nowrap">Staking</Link>
+              <Link href="/analytics" className="text-sm opacity-80 hover:opacity-100 whitespace-nowrap">Analytics</Link>
             </div>
             <div>
               <Connect />
